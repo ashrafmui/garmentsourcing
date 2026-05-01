@@ -1,26 +1,84 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bone: #f5f1ea;
+  --color-bone-2: #ede7da;
+  --color-bone-3: #e3dccb;
+  --color-ink: #1a1815;
+  --color-ink-2: #2c2823;
+  --color-ink-muted: #6b645a;
+  --color-line: rgba(26, 24, 21, 0.12);
+  --color-line-strong: rgba(26, 24, 21, 0.22);
+  --color-madder: #a2391e;
+  --color-madder-soft: #c2654a;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background: var(--color-bone);
+  color: var(--color-ink);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-bone);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.015em;
+}
+
+.hairline {
+  border-color: var(--color-line);
+}
+
+.hairline-strong {
+  border-color: var(--color-line-strong);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.grain {
+  background-image:
+    radial-gradient(rgba(26, 24, 21, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(26, 24, 21, 0.04) 1px, transparent 1px);
+  background-size: 3px 3px, 7px 7px;
+  background-position: 0 0, 1px 2px;
+}
+
+.weave {
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(26, 24, 21, 0.06) 0 1px,
+      transparent 1px 6px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(26, 24, 21, 0.06) 0 1px,
+      transparent 1px 6px
+    );
 }
