@@ -44,20 +44,18 @@ export function Capabilities() {
   return (
     <section id="capabilities" className="border-b hairline bg-bone-2/40">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
-        <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-2xl">
-            <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
-              <span className="inline-block h-px w-8 bg-ink" />
-              Capabilities
-            </div>
-            <h2 className="font-display text-4xl font-light leading-[1.05] tracking-tight md:text-5xl">
-              Every step of the line, taken seriously.
-            </h2>
+        <div className="mb-14 max-w-2xl">
+          <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
+            <span className="inline-block h-px w-8 bg-ink" />
+            Capabilities
           </div>
-          <p className="max-w-sm text-[15px] leading-[1.65] text-ink-muted">
-            Six functions, one accountable team. You email one merchandiser
-            in New York; the work happens across two time zones, fourteen
-            hours apart.
+          <h2 className="font-display text-4xl font-light leading-[1.05] tracking-tight md:text-5xl">
+            One partner from sketch to seafreight.
+          </h2>
+          <p className="mt-6 max-w-xl text-[15px] leading-[1.65] text-ink-muted">
+            Sourcing, production, QA, compliance, and logistics — one team
+            on the floor in Dhaka, one desk in New York, every step of the
+            line taken seriously.
           </p>
         </div>
 

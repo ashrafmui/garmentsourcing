@@ -25,10 +25,8 @@ export function Compliance() {
               Papered, audited, and walked through every quarter.
             </h2>
             <p className="mt-8 max-w-md text-[15px] leading-[1.7] text-ink-muted">
-              Compliance is non-negotiable, not a feature. We work only with
-              factories that pass our own pre-audit and we publish a
-              quarterly sustainability scorecard to all clients — including
-              the items we&apos;re still working on.
+              We publish a quarterly sustainability scorecard to all clients
+              — including the items we&apos;re still working on.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-px bg-line">

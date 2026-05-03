@@ -41,20 +41,14 @@ export function Process() {
   return (
     <section id="process" className="border-b hairline bg-bone-2/40">
       <div className="mx-auto max-w-[1400px] px-6 py-24 md:py-32">
-        <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
-          <div className="max-w-2xl">
-            <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
-              <span className="inline-block h-px w-8 bg-ink" />
-              Process
-            </div>
-            <h2 className="font-display text-4xl font-light leading-[1.05] tracking-tight md:text-5xl">
-              Ninety days, predictably.
-            </h2>
+        <div className="mb-14 max-w-2xl">
+          <div className="mb-4 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-ink-muted">
+            <span className="inline-block h-px w-8 bg-ink" />
+            Process
           </div>
-          <p className="max-w-sm text-[15px] leading-[1.65] text-ink-muted">
-            A six-step calendar that holds whether you&apos;re placing 600
-            units of one style or six containers of fifty.
-          </p>
+          <h2 className="font-display text-4xl font-light leading-[1.05] tracking-tight md:text-5xl">
+            Ninety days, predictably.
+          </h2>
         </div>
 
         <ol className="grid grid-cols-1 gap-px bg-line md:grid-cols-2 lg:grid-cols-3">

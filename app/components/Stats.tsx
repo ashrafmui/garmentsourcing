@@ -1,10 +1,35 @@
-const items = [
-  { v: "2011", l: "Year founded" },
-  { v: "60+", l: "Vetted factory partners" },
-  { v: "9.4M", l: "Annual units shipped" },
-  { v: "98.6%", l: "On-time shipment rate" },
-  { v: "14", l: "QA inspectors on the floor" },
-  { v: "4", l: "Continents shipped to" },
+import { CountUp } from "./CountUp";
+
+type Item =
+  | { kind: "static"; v: string; l: string }
+  | {
+      kind: "count";
+      target: number;
+      prefix?: string;
+      suffix?: string;
+      decimals?: number;
+      l: string;
+    };
+
+const items: Item[] = [
+  { kind: "static", v: "2011", l: "Year founded" },
+  { kind: "count", target: 60, suffix: "+", l: "Vetted factory partners" },
+  {
+    kind: "count",
+    target: 9.4,
+    suffix: "M",
+    decimals: 1,
+    l: "Annual units shipped",
+  },
+  {
+    kind: "count",
+    target: 98.6,
+    suffix: "%",
+    decimals: 1,
+    l: "On-time shipment rate",
+  },
+  { kind: "count", target: 14, l: "QA inspectors on the floor" },
+  { kind: "count", target: 4, l: "Continents shipped to" },
 ];
 
 export function Stats() {
@@ -22,12 +47,18 @@ export function Stats() {
         </div>
         <div className="grid grid-cols-2 gap-px bg-bone/15 md:grid-cols-3 lg:grid-cols-6">
           {items.map((s) => (
-            <div
-              key={s.l}
-              className="bg-ink px-6 py-10"
-            >
-              <div className="font-display text-5xl font-light tracking-tight">
-                {s.v}
+            <div key={s.l} className="bg-ink px-6 py-10">
+              <div className="font-display text-5xl font-light tracking-tight tabular-nums">
+                {s.kind === "static" ? (
+                  s.v
+                ) : (
+                  <CountUp
+                    target={s.target}
+                    prefix={s.prefix}
+                    suffix={s.suffix}
+                    decimals={s.decimals}
+                  />
+                )}
               </div>
               <div className="mt-3 text-[11px] uppercase tracking-[0.2em] text-bone/55">
                 {s.l}

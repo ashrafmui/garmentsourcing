@@ -79,11 +79,11 @@ function Wordmark() {
   return (
     <span className="flex items-baseline gap-2">
       <span className="font-display text-[20px] font-semibold leading-none tracking-tight">
-        Atelier
+        Seawing
       </span>
       <span className="size-1 rounded-full bg-madder" />
       <span className="font-display text-[20px] font-semibold leading-none tracking-tight">
-        Mill
+        Sourcing
       </span>
     </span>
   );
