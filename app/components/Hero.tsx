@@ -25,7 +25,7 @@ export function Hero() {
         <div className="max-w-[1100px]">
           <div className="mb-10 flex items-center gap-3 text-[11px] uppercase tracking-[0.22em] text-bone/80">
             <span className="inline-block h-px w-8 bg-bone/70" />
-            Buying house · est. on the floor.
+            Buying house est. on the floor.
           </div>
 
           <TypedTitle />
@@ -48,7 +48,7 @@ export function Hero() {
               href="#capabilities"
               className="group inline-flex items-center gap-2 rounded-full border border-bone/50 px-5 py-3 text-[13px] font-medium uppercase tracking-[0.18em] text-bone hover:bg-bone hover:text-ink"
             >
-              Our capabilities
+              What we do
               <IconArrowUpRight className="size-4" />
             </Link>
           </div>

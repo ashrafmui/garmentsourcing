@@ -24,11 +24,11 @@ export default function Home() {
         <Reveal><Capabilities /></Reveal>
         <ClothingRack />
         <Reveal><Categories /></Reveal>
-        <Reveal><Stats /></Reveal>
-        <Reveal><Presence /></Reveal>
-        <Reveal><Process /></Reveal>
-        <Reveal><Compliance /></Reveal>
-        <Reveal><Testimonials /></Reveal>
+        {/* <Reveal><Stats /></Reveal> */}
+        {/* <Reveal><Presence /></Reveal> */}
+        {/* <Reveal><Process /></Reveal> */}
+        {/* <Reveal><Compliance /></Reveal> */}
+        {/* <Reveal><Testimonials /></Reveal> */}
         <Reveal><CTA /></Reveal>
       </main>
       <Footer />

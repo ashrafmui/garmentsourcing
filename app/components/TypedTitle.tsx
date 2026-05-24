@@ -3,14 +3,14 @@
 import { useEffect, useState } from "react";
 
 type Part =
-  | { kind: "text"; text: string; italic?: boolean }
+  | { kind: "text"; text: string; italic?: boolean; }
   | { kind: "br" };
 
 const PLAN: Part[] = [
   { kind: "text", text: "From Bangladesh’s mills" },
   { kind: "br" },
   { kind: "text", text: "to ", italic: true },
-  { kind: "text", text: " global retail floors." },
+  { kind: "text", text: " your storefront." },
 ];
 
 const TOTAL = PLAN.reduce(
@@ -77,7 +77,7 @@ export function TypedTitle() {
       </span>
       <span
         className="absolute inset-0"
-        aria-label="From Bangladesh's mills to global retail floors."
+        aria-label="From Bangladesh's mills to your storefront."
       >
         {visible}
         <span
